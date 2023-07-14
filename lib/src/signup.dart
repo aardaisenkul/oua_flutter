@@ -5,8 +5,8 @@ import 'package:high_paw/src/Widget/bezierContainer.dart';
 import 'package:high_paw/src/loginPage.dart';
 
 class SignUpPage extends StatefulWidget {
-  SignUpPage({Key? key, this.title}) : super(key: key);
-
+  SignUpPage({Key? key, required this.onTap, this.title}) : super(key: key);
+  final Function()? onTap;
   final String? title;
 
   @override
@@ -143,7 +143,11 @@ class _SignUpPageState extends State<SignUpPage> {
     return InkWell(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => LoginPage()));
+            context,
+            MaterialPageRoute(
+                builder: (context) => LoginPage(
+                      onTap: () {},
+                    )));
       },
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 20),

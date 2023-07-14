@@ -4,8 +4,8 @@ import 'package:high_paw/src/signup.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class WelcomePage extends StatefulWidget {
-  WelcomePage({Key? key, this.title}) : super(key: key);
-
+  WelcomePage({Key? key, this.title, required this.onTap}) : super(key: key);
+  final Function()? onTap;
   final String? title;
 
   @override
@@ -17,7 +17,11 @@ class _WelcomePageState extends State<WelcomePage> {
     return InkWell(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => LoginPage()));
+            context,
+            MaterialPageRoute(
+                builder: (context) => LoginPage(
+                      onTap: () {},
+                    )));
       },
       child: Container(
         width: MediaQuery.of(context).size.width,
@@ -45,7 +49,11 @@ class _WelcomePageState extends State<WelcomePage> {
     return InkWell(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => SignUpPage()));
+            context,
+            MaterialPageRoute(
+                builder: (context) => SignUpPage(
+                      onTap: () {},
+                    )));
       },
       child: Container(
         width: MediaQuery.of(context).size.width,

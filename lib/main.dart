@@ -2,8 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:high_paw/firebase_options.dart';
-
-import 'src/welcomePage.dart';
+import 'package:high_paw/src/auth_services.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +26,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: WelcomePage(),
+      home: AuthServices(),
     );
   }
 }
