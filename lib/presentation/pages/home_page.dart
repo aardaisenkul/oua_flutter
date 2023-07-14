@@ -50,17 +50,6 @@ class _HomeScreenState extends State<HomeScreen> {
         },
         child: Scaffold(
           floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
-          floatingActionButton: FloatingActionButton.extended(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (_) => const HistoryPage(),
-                ),
-              );
-            },
-            label: const Text("Boş Buton"),
-          ),
           body: Padding(
             padding: const EdgeInsets.only(top: 60.0),
             child: Column(

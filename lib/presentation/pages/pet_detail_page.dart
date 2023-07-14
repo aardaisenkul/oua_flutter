@@ -10,6 +10,7 @@ import 'package:high_paw/core/const/media_const.dart';
 import 'package:high_paw/di/locator.dart';
 import 'package:high_paw/domain/entities/pet.dart';
 import 'package:high_paw/presentation/bloc/pet_detail_bloc.dart';
+import 'package:high_paw/presentation/pages/history_page.dart';
 import 'package:high_paw/presentation/widget/pet_detail/pet_info_section.dart';
 import 'package:high_paw/presentation/common/image_zoom_page.dart';
 
@@ -205,7 +206,14 @@ class DetailScreenBottom extends StatelessWidget {
             color: isDisabled ? Colors.grey.shade700 : ColorConst.blue,
           ),
           child: InkWell(
-            onTap: isDisabled ? null : petDetailsBloc.onAdopt,
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const HistoryPage(),
+                ),
+              );
+            },
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: Row(
@@ -215,7 +223,7 @@ class DetailScreenBottom extends StatelessWidget {
                     const CupertinoActivityIndicator(color: Colors.white)
                   else
                     Text(
-                      petDetailsBloc.isAdopted() ? "Adoptted" : 'Bağış Yap',
+                      'Bağış Yap',
                       style: FontConst.poppins
                           .copyWith(fontSize: 14, color: ColorConst.white),
                     ),
@@ -315,22 +323,6 @@ class PetProfileInfo extends StatelessWidget {
             color: Colors.black,
             fontWeight: FontWeight.bold,
           ),
-        ),
-        Row(
-          children: [
-            const Icon(
-              Icons.location_on_outlined,
-              color: Colors.blue,
-              size: 16,
-            ),
-            Text(
-              '${animal.distanceToUser}',
-              style: FontConst.poppins.copyWith(
-                color: Colors.black.withOpacity(0.6),
-                fontSize: 14,
-              ),
-            ),
-          ],
         )
       ],
     );

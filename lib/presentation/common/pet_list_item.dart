@@ -94,24 +94,30 @@ class PetListItem extends StatelessWidget {
                             height: 8.0,
                           ),
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            mainAxisSize: MainAxisSize.max,
                             children: <Widget>[
                               Icon(
-                                FontAwesomeIcons.locationDot,
+                                FontAwesomeIcons.sackDollar,
                                 color: Theme.of(context).primaryColor,
-                                size: 15.0,
-                              ),
-                              const SizedBox(
-                                width: 6.0,
+                                size: 25.0,
                               ),
                               Flexible(
                                 child: Text(
-                                  '${animal.distanceToUser}',
+                                  '${animal.collectedMoney}%',
                                   style: TextStyle(
-                                    fontSize: 15.0,
+                                    fontSize: 20.0,
                                     color: Theme.of(context).primaryColor,
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
+                              ),
+                              CircularProgressIndicator(
+                                value:
+                                    double.parse(animal.collectedMoney ?? '0') /
+                                        100,
+                                backgroundColor: Colors.grey,
+                                semanticsLabel: 'Circular progress indicator',
                               ),
                             ],
                           ),
