@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "989289023883",
+    "project_id": "highpaw-47bd4",
+    "storage_bucket": "highpaw-47bd4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989289023883:android:6743824dcc318fdc47878e",
+        "android_client_info": {
+          "package_name": "com.example.high_paw"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989289023883-bna0kqtcglbdasj941v2063j3t7geeat.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.high_paw",
+            "certificate_hash": "2353fa95635992504417225806894066b8e0ddf9"
+          }
+        },
+        {
+          "client_id": "989289023883-s9771eadbn1k03pccvr42gsgu2d58vrk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHK62G9KT70oqQdFlWJbNDhzxNzce35O8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "989289023883-s9771eadbn1k03pccvr42gsgu2d58vrk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "989289023883-91i2vicnphq1a3pci21jruqmv1htl8fs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.highPaw"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
