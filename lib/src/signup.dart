@@ -18,7 +18,6 @@ class _SignUpPageState extends State<SignUpPage> {
   final emailController = TextEditingController();
   final nameController = TextEditingController();
   final phoneController = TextEditingController();
-
   final TextEditingController userTypecontroller = TextEditingController();
   String? _selectedItem;
   final passwordController = TextEditingController();
@@ -48,7 +47,7 @@ class _SignUpPageState extends State<SignUpPage> {
         'address': addressController.text,
         'userType': userTypecontroller.text,
       });
-      print("kayıt oldu");
+      print("kayit oldu");
       Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
       Navigator.pop(context);
@@ -196,7 +195,15 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget dropDown() {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Text(
+          "User Type",
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+        ),
+        SizedBox(
+          height: 10,
+        ),
         DropdownButtonFormField<String>(
           value: _selectedItem,
           items: _dropdownItems.map((String value) {
@@ -212,8 +219,9 @@ class _SignUpPageState extends State<SignUpPage> {
             });
           },
           decoration: InputDecoration(
-            labelText: 'Seçim Yapın',
-          ),
+              filled: true,
+              fillColor: Color(0xfff3f3f4),
+              border: InputBorder.none),
         ),
       ],
     );
@@ -222,12 +230,45 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget _emailPasswordWidget() {
     return Column(
       children: <Widget>[
-        _entryField("Username", nameController),
-        _entryField("Email id", emailController),
-        _entryField("Password", passwordController, isPassword: true),
-        _entryField("Phone", phoneController),
-        _entryField("Address", addressController),
-        dropDown(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Expanded(
+              child: _entryField("Username", nameController),
+            ),
+            SizedBox(width: 10),
+            Expanded(
+              child: _entryField("Email id", emailController),
+            ),
+          ],
+        ),
+        SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Expanded(
+              child:
+                  _entryField("Password", passwordController, isPassword: true),
+            ),
+            SizedBox(width: 10),
+            Expanded(
+              child: _entryField("Phone", phoneController),
+            ),
+          ],
+        ),
+        SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Expanded(
+              child: _entryField("Address", addressController),
+            ),
+            SizedBox(width: 10),
+            Expanded(
+              child: dropDown(),
+            ),
+          ],
+        ),
       ],
     );
   }
@@ -255,14 +296,14 @@ class _SignUpPageState extends State<SignUpPage> {
                     SizedBox(height: height * .2),
                     _title(),
                     SizedBox(
-                      height: 50,
+                      height: 30,
                     ),
                     _emailPasswordWidget(),
                     SizedBox(
                       height: 20,
                     ),
                     GestureDetector(onTap: signUserUp, child: _submitButton()),
-                    SizedBox(height: height * .14),
+                    // SizedBox(height: height * .1),
                     _loginAccountLabel(),
                   ],
                 ),

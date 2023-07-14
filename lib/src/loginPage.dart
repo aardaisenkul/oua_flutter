@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:high_paw/src/homePage.dart';
 import 'package:high_paw/src/signup.dart';
 
 import 'Widget/bezierContainer.dart';
@@ -297,11 +298,20 @@ class _LoginPageState extends State<LoginPage> {
                   GestureDetector(onTap: signUserIn, child: _submitButton()),
                   Container(
                     padding: EdgeInsets.symmetric(vertical: 10),
-                    alignment: Alignment.centerRight,
-                    child: Text('Forgot Password ?',
-                        style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.w500)),
+                    alignment: Alignment.center,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomePage()));
+                      },
+                      child: Text('continue without an account',
+                          style: TextStyle(
+                              fontSize: 14, fontWeight: FontWeight.bold)),
+                    ),
                   ),
+                  //_withoutaccount(),
                   _createAccountLabel(),
                 ],
               ),
