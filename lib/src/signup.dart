@@ -12,6 +12,7 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
+  final myController = TextEditingController();
   Widget _backButton() {
     return InkWell(
       onTap: () {
@@ -48,6 +49,7 @@ class _SignUpPageState extends State<SignUpPage> {
           ),
           TextField(
               obscureText: isPassword,
+              controller: myController,
               decoration: InputDecoration(
                   border: InputBorder.none,
                   fillColor: Color(0xfff3f3f4),

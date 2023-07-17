@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:high_paw/di/locator.dart';
 import 'package:high_paw/presentation/pages/home_page.dart';
+import 'package:high_paw/src/welcomePage.dart';
 import 'presentation/pages/history_page.dart';
 
 Future<void> main() async {
@@ -20,9 +21,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.orange,
         // textTheme: GoogleFonts.poppinsTextTheme.call(),
       ),
-      initialRoute: '/',
+      initialRoute: '/welcome',
       routes: {
         '/': (ctx) => const HomeScreen(),
+        '/welcome': (ctx) => WelcomePage(),
         '/history': (ctx) => const HistoryPage(),
       },
     );
