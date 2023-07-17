@@ -92,7 +92,7 @@ Alınan kararlar: Arayüzde birkaç değişiklik yapmaya ve en kısa sürede kod
 
 Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
 
-- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü WhatsApp üzerinden yapılmasına karar verilmiştir. Daily ve weekly Scrum toplantısı ekran görüntüleri word dosyası içinde Readme'de tarafımızdan paylaşılmaktadır: [Sprint 1 Daily Scrum Chats](https://github.com/aardaisenkul/oua_flutter/blob/main/ProjectManagement/Sprint1Documents/Sprint2_daily.docx)
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü WhatsApp üzerinden yapılmasına karar verilmiştir. Daily ve weekly Scrum toplantısı ekran görüntüleri word dosyası içinde Readme'de tarafımızdan paylaşılmaktadır: [Sprint 2 Daily Scrum Chats](https://github.com/aardaisenkul/oua_flutter/blob/main/ProjectManagement/Sprint1Documents/Sprint2_daily.docx)
 
 
 - **Sprint board update**: Sprint board screenshotları: 
@@ -126,7 +126,7 @@ Alınan kararlar: Uygulamada sadeleştirmeye ve arayüzde ve renk seçiminde de�
 
 Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
 
-- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü WhatsApp üzerinden yapılmasına karar verilmiştir. Daily ve weekly Scrum toplantısı ekran görüntüleri word dosyası içinde Readme'de tarafımızdan paylaşılmaktadır: [Sprint 1 Daily Scrum Chats](https://github.com/aardaisenkul/oua_flutter/blob/main/ProjectManagement/Sprint1Documents/Sprint3_daily.docx)
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü WhatsApp üzerinden yapılmasına karar verilmiştir. Daily ve weekly Scrum toplantısı ekran görüntüleri word dosyası içinde Readme'de tarafımızdan paylaşılmaktadır: [Sprint 3 Daily Scrum Chats](https://github.com/aardaisenkul/oua_flutter/blob/main/ProjectManagement/Sprint1Documents/Sprint3_daily.docx)
 
 
 - **Sprint board update**: Sprint board screenshotları: 
