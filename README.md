@@ -145,8 +145,8 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 ![SS 3](https://github.com/aardaisenkul/oua_flutter/blob/main/ProjectManagement/Sprint1Documents/u6.jpeg)
 ![SS 3](https://github.com/aardaisenkul/oua_flutter/blob/main/ProjectManagement/Sprint1Documents/u7.jpeg)
 
-- **Sprint Retrospective:**
-  - Tahmin puanları gözden geçirilmeli ve sprint planlama toplantılarında gerekli geri bildirimlerin developer'lar tarafından verildiğine emin olunmalı
-  - Projeyi tamamlayabilmek için koda ayrılan efor/saat arttırılmalı 
+- **Sprint Review**: 
+-  Sprint hedeflerine ulaştı ve ürün planlandığı gibi geliştirildi. 
+-  Ürün tamamlandı.
 
 
