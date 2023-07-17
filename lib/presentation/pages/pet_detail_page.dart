@@ -207,12 +207,17 @@ class DetailScreenBottom extends StatelessWidget {
           ),
           child: InkWell(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (_) => const HistoryPage(),
-                ),
-              );
+              AwesomeDialog(
+                context: context,
+                dialogType: DialogType.SUCCES,
+                animType: AnimType.RIGHSLIDE,
+                title: 'Başarılı',
+                desc: 'Bağışınız için teşekkürler!',
+                btnCancelOnPress: () {},
+                btnOkOnPress: () {
+                  Navigator.pop(context);
+                },
+              ).show();
             },
             child: Padding(
               padding: const EdgeInsets.all(10),

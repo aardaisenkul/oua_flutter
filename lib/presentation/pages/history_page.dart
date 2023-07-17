@@ -62,7 +62,7 @@ class _HistoryPageState extends State<HistoryPage> {
                         Column(
                           children: <Widget>[
                             Text(
-                              'Boş Sayfa',
+                              'Profil',
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 22.0,

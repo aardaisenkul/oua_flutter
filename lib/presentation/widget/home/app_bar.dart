@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:open_peeps/open_peeps.dart';
 
+import '../../pages/history_page.dart';
+
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({
     super.key,
@@ -24,14 +26,24 @@ class HomeAppBar extends StatelessWidget {
             ),
           ],
         ),
-        CircleAvatar(
-          radius: 20.0,
-          // backgroundImage: AssetImage(ImageConst.transparentCat),
-          child: PeepAvatar.fromPeep(
-            size: 30,
-            peep: PeepGenerator().generate(),
+        InkWell(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => const HistoryPage(),
+              ),
+            );
+          },
+          child: CircleAvatar(
+            radius: 20.0,
+            // backgroundImage: AssetImage(ImageConst.transparentCat),
+            child: PeepAvatar.fromPeep(
+              size: 30,
+              peep: PeepGenerator().generate(),
+            ),
           ),
-        ),
+        )
       ],
     );
   }
